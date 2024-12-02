@@ -1,33 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Page</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login Session</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style/page.css">
 </head>
-<body>
-  <div id="login-page">
-    <h1>Login</h1>
-    <input type="text" id="username-email" placeholder="Username or Email">
-    <input type="password" id="password" placeholder="Password">
-    <button id="login-button">Login</button>
-    <p id="login-error"></p>
-  </div>
-
-  <div id="profile-page" style="display: none;">
-    <h1>Your Profile</h1>
-    <p id="user-info"></p>
-
-    <h2>Statistics</h2>
-    <div id="stats">
-      <svg id="graph1"></svg>
-      <svg id="graph2"></svg>
-    </div>
-
-    <button id="logout-button">Logout</button>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <body>
+        <div class="login-container" id="login-container">
+            <div class="title">
+                Login Form
+            </div>
+                <div id="login-form">
+                    <input class="login-txt" type="text" id="username" placeholder="Username" required>
+                    <input class="login-txt" type="password" id="password" placeholder="Password" required>
+                    <div class="field">
+                        <button id="Login-button">Login</button>
+                    </div>
+                </div>
+            </div>
+            <button id="logout-button">Logout</button>
+            <div id="username-display"></div>
+            <div id="statistics-display"></div>
+            <button id="barChartButton">Display Bar Chart</button>
+            <button id="circularButton">Display Diagram</button>
+            <div class=" container">
+                <div id="bar-chart-container"></div>
+                <div id="circular-diagram-container">
+                <p id="test" ></p>
+            </div>
+        </div>
+        <script src="src/chart.js" type="module"></script>
+    </body>
 </html>
